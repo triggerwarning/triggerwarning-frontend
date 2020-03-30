@@ -1,6 +1,6 @@
 <template>
   <default>
-    <div class="fullscreen border border-green-500 w-full">
+    <div class="fullscreen">
       <p5-sketch></p5-sketch>
     </div>
   </default>
@@ -23,5 +23,6 @@ export default {
 <style>
   .fullscreen {
     height: calc(100vh - 48px);
+    width: 100vw;
   }
 </style>

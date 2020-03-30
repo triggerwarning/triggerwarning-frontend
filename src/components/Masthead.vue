@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="masthead">
+    <nav class="masthead great-western">
       <div class="container mx-auto flex">
         <div class="px-3 py-3 flex-1">
           <router-link to="/">Trigger Warning</router-link>
