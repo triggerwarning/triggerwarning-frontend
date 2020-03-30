@@ -2,4 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800&display=swap');
+/* Import Open Sans for everything that needs to be readable. */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+/* Great Western has to be imported by including a script in the head of index.html. This is bullshit, and I hate it. */
