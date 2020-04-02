@@ -11,8 +11,10 @@
       <!-- Anyone can join a room. -->
       <div class="flex flex-col mt-20 border p-8">
         <h2 class="block w-full text-center text-3xl leading-none mb-8">Join A Room</h2>
-        <label for="roomid" class="leading-none">Room ID:</label>
-        <input name="roomid" type="text" placeholder="A1234" class="input mb-2 p-3 text-center font-bold text-3xl uppercase"> <!--TODO force uppercase output. -->
+        <div class="my-1">
+          <label for="roomid" class="leading-none">Room ID:</label>
+          <input name="roomid" type="text" placeholder="A1234" class="input block w-full p-3 text-center font-bold text-3xl uppercase"> <!--TODO force uppercase output. -->
+        </div>
         <button class="button my-2 p-3">Join Room</button>
       </div>
 
@@ -25,13 +27,13 @@
       <!-- Otherwise, tell them to sign in / create an account. -->
       <div v-else class="flex flex-col mt-12 mb-40 border p-8">
         <h2 class="block w-full text-center text-3xl leading-none mb-8">
-          <span v-if="showLogin">Log In</span>
+          <span v-if="showLoginForm">Log In</span>
           <span v-else>Register</span>
           to Create Rooms</h2>
-        <login-form v-if="showLogin"></login-form>
+        <login-form v-if="showLoginForm"></login-form>
         <register-form v-else></register-form>
-        <button v-if="showLogin" @click="showLogin = !showLogin" class="text-left">Don't have an account?</button>
-        <button v-else @click="showLogin = !showLogin" class="text-left">Already have an account?</button>
+        <button v-if="showLoginForm" @click="showLoginForm = !showLoginForm" class="text-left">Don't have an account?</button>
+        <button v-else @click="showLoginForm = !showLoginForm" class="text-left">Already have an account?</button>
       </div>
     </div>
   </default>
@@ -46,7 +48,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      showLogin: true,
+      showLoginForm: true,
       loggedIn: false // TODO Store logged-in status in vuex.
     }
   },

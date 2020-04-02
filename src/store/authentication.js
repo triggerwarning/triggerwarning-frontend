@@ -51,6 +51,7 @@ export default {
       commit('unsetToken')
       
       // TODO redirect the user to the homepage.
+      console.log('User Logged out!')
     }
   },
 

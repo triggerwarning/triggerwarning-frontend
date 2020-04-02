@@ -28,7 +28,7 @@ export default {
   methods: {
     submit() {
       console.log("Login form submitted." + JSON.stringify(this.formData))
-      this.$store.state.dispatch('logIn', this.formData.username, this.formData.username, undefined)
+      this.$store.dispatch('logIn', this.formData.username, this.formData.username, undefined)
     }
   }
 }
