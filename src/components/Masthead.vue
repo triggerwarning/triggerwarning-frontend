@@ -19,7 +19,7 @@
         </div>
       </div>
     </nav>
-    <div class="masthead-decoration">
+    <div v-if="displayGun" class="masthead-decoration">
       <img src="/gun-masthead.svg" style="width: 160px; transform: translate(-24px, -2px);">
     </div>
   </div>
@@ -29,7 +29,8 @@
 export default {
   data() {
     return {
-      loggedIn: false // TODO store logged-in state in vuex.
+      loggedIn: false, // TODO store logged-in state in vuex.
+      displayGun: false
     }
   }
 }
